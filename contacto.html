@@ -17,23 +17,41 @@
 <body>
 
 
-    <!-- ========================================
-         MENÚ
-    ========================================= -->
+    <!-- ==============================
+         HEADER
+    =============================== -->
 
     <header>
 
         <div class="logo">
 
-            <img
-                src="images/logo.png"
-                alt="ChileVersa Studio"
-            >
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="ChileVersa Studio"
+                >
+
+            </a>
 
         </div>
 
 
-        <nav>
+        <!-- MENÚ CELULAR -->
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Abrir menú">
+
+            ☰
+
+        </button>
+
+
+        <!-- MENÚ -->
+
+        <nav id="mainNav">
 
             <a href="index.html">
                 Inicio
@@ -55,7 +73,9 @@
                 Noticias
             </a>
 
-            <a href="contacto.html" class="active">
+            <a
+                href="contacto.html"
+                class="active">
                 Contacto
             </a>
 
@@ -65,73 +85,89 @@
 
 
 
-    <!-- ========================================
-         CONTENIDO
-    ========================================= -->
+    <!-- ==============================
+         CONTACTO
+    =============================== -->
 
     <main>
 
 
-        <!-- ENCABEZADO -->
+        <section class="page-hero">
 
-        <section class="page-header">
+            <div class="page-content">
 
-            <p class="small-title">
-                CHILEVERSA STUDIO
-            </p>
-
-
-            <h1>
-
-                PONTE EN
-
-                <span>
-                    CONTACTO
-                </span>
-
-            </h1>
+                <p class="small-title">
+                    CHILEVERSA STUDIO OFFICIAL
+                </p>
 
 
-            <p>
+                <h1>
 
-                ¿Quieres conocer nuestros proyectos,
-                formar parte de nuestra comunidad
-                o simplemente hablar con nosotros?
+                    HABLEMOS
 
-            </p>
+                    <span>
+                        CONTIGO
+                    </span>
+
+                </h1>
+
+
+                <p class="page-description">
+
+                    ¿Tienes alguna pregunta, propuesta o necesitas
+                    contactar con nuestro equipo? Estamos aquí para ayudarte.
+
+                </p>
+
+
+            </div>
 
         </section>
 
 
 
-        <!-- ========================================
-             CONTACTOS
-        ========================================= -->
+        <!-- ==============================
+             INFORMACIÓN DE CONTACTO
+        =============================== -->
 
-        <section class="contact-page">
+        <section class="contact-section">
 
-
-            <div class="section-title">
-
-                <p>
-                    ENCUÉNTRANOS
-                </p>
+            <div class="contact-container">
 
 
-                <h2>
-                    NUESTROS CONTACTOS
-                </h2>
+                <!-- SOPORTE -->
 
-            </div>
+                <div class="contact-card">
 
-
-
-            <div class="contact-grid">
+                    <div class="contact-icon">
+                        ✉
+                    </div>
 
 
-                <!-- =================================
-                     DISCORD
-                ================================== -->
+                    <h2>
+                        Contacta soporte
+                    </h2>
+
+
+                    <p>
+                        Para consultas, problemas o información
+                        relacionada con nuestros proyectos.
+                    </p>
+
+
+                    <a
+                        href="mailto:chileversastudio@gmail.com"
+                        class="contact-link">
+
+                        chileversastudio@gmail.com
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- DISCORD -->
 
                 <div class="contact-card">
 
@@ -140,27 +176,22 @@
                     </div>
 
 
-                    <h3>
-                        DISCORD
-                    </h3>
+                    <h2>
+                        Comunidad de Discord
+                    </h2>
 
 
                     <p>
-
-                        Únete a nuestra comunidad
-                        oficial y mantente al día
-                        con todas las novedades
-                        de ChileVersa Studio.
-
+                        Únete a nuestra comunidad oficial para conocer
+                        las novedades, actualizaciones y proyectos.
                     </p>
 
 
                     <a
                         href="https://discord.gg/GYCBpRNHG"
-                        class="btn principal"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >
+                        class="contact-button">
 
                         UNIRME AL DISCORD
 
@@ -170,9 +201,7 @@
 
 
 
-                <!-- =================================
-                     ROBLOX
-                ================================== -->
+                <!-- ROBLOX -->
 
                 <div class="contact-card">
 
@@ -181,26 +210,22 @@
                     </div>
 
 
-                    <h3>
-                        ROBLOX
-                    </h3>
+                    <h2>
+                        Roblox
+                    </h2>
 
 
                     <p>
-
-                        Visita nuestro proyecto
-                        principal y disfruta
-                        de Chile Bus RP.
-
+                        Visita nuestro proyecto principal en Roblox
+                        y descubre Chile Bus RP.
                     </p>
 
 
                     <a
                         href="https://www.roblox.com/es/games/130025649161150/Chile-bus-RP"
-                        class="btn principal"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >
+                        class="contact-button">
 
                         VER CHILE BUS RP
 
@@ -209,155 +234,34 @@
                 </div>
 
 
-
-                <!-- =================================
-                     CORREO
-                ================================== -->
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        📧
-                    </div>
-
-
-                    <h3>
-                        CORREO
-                    </h3>
-
-
-                    <p>
-
-                        Para consultas, soporte,
-                        propuestas o cualquier
-                        asunto relacionado con
-                        ChileVersa Studio.
-
-                    </p>
-
-
-                    <p class="support-email">
-
-                        chileversastudio@gmail.com
-
-                    </p>
-
-
-                    <a
-                        href="mailto:chileversastudio@gmail.com"
-                        class="btn principal"
-                    >
-
-                        ENVIAR CORREO
-
-                    </a>
-
-                </div>
-
-
-
-                <!-- =================================
-                     SOPORTE
-                ================================== -->
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        🛠️
-                    </div>
-
-
-                    <h3>
-                        SOPORTE
-                    </h3>
-
-
-                    <p>
-
-                        ¿Tienes algún problema,
-                        sugerencia o consulta?
-
-                        Puedes comunicarte con
-                        nosotros mediante nuestro
-                        correo oficial.
-
-                    </p>
-
-
-                    <a
-                        href="mailto:chileversastudio@gmail.com"
-                        class="btn secundario"
-                    >
-
-                        CONTACTAR SOPORTE
-
-                    </a>
-
-
-                    <!-- CORREO DE SOPORTE -->
-
-                    <p class="support-email">
-
-                        chileversastudio@gmail.com
-
-                    </p>
-
-                </div>
-
-
             </div>
-
 
         </section>
 
 
 
-        <!-- ========================================
+        <!-- ==============================
              MENSAJE FINAL
-        ========================================= -->
+        =============================== -->
 
-        <section class="team-message">
-
+        <section class="contact-message">
 
             <p class="small-title">
-
-                CHILEVERSA STUDIO OFFICIAL
-
+                CHILEVERSA STUDIO
             </p>
 
 
             <h2>
-
-                NOS VEMOS
-
-                <span>
-                    EN ROBLOX
-                </span>
-
+                ESTAMOS PARA
+                <span>AYUDARTE</span>
             </h2>
 
 
             <p>
-
-                Gracias por formar parte de nuestra
-                comunidad y apoyar nuestros proyectos.
-
+                Gracias por confiar en nuestro estudio.
+                Seguimos trabajando para crear nuevas experiencias
+                y proyectos dentro de Roblox.
             </p>
-
-
-            <div class="buttons">
-
-                <a
-                    href="index.html"
-                    class="btn principal"
-                >
-
-                    VOLVER AL INICIO
-
-                </a>
-
-            </div>
-
 
         </section>
 
@@ -366,12 +270,11 @@
 
 
 
-    <!-- ========================================
+    <!-- ==============================
          FOOTER
-    ========================================= -->
+    =============================== -->
 
     <footer>
-
 
         <div>
 
@@ -379,9 +282,8 @@
                 CHILEVERSA STUDIO
             </strong>
 
-
             <p>
-                Creando experiencias en Roblox.
+                Creando experiencias dentro de Roblox.
             </p>
 
         </div>
@@ -395,10 +297,11 @@
 
         </div>
 
-
     </footer>
 
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 

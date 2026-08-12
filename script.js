@@ -1,54 +1,8 @@
-/* ========================================
-   CHILEVERSA STUDIO
-   SCRIPT PRINCIPAL
-======================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
 
-
-    /* ========================================
-       SLIDER DE LA PÁGINA DE INICIO
-    ========================================= */
-
-    const slides = document.querySelectorAll(".hero-slide");
-
-    let currentSlide = 0;
-
-
-    if (slides.length > 1) {
-
-        slides.forEach(function (slide, index) {
-
-            if (index === 0) {
-                slide.classList.add("active");
-            } else {
-                slide.classList.remove("active");
-            }
-
-        });
-
-
-        setInterval(function () {
-
-            slides[currentSlide].classList.remove("active");
-
-            currentSlide++;
-
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            }
-
-            slides[currentSlide].classList.add("active");
-
-        }, 5000);
-
-    }
-
-
-
-    /* ========================================
+    /* ==========================================
        MENÚ PARA CELULAR
-    ======================================== */
+    ========================================== */
 
     const mobileMenuButton =
         document.getElementById("mobileMenuButton");
@@ -59,97 +13,160 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (mobileMenuButton && mainNav) {
 
+        mobileMenuButton.addEventListener("click", function () {
 
-        /* ABRIR / CERRAR MENÚ */
+            mainNav.classList.toggle("mobile-open");
 
-        mobileMenuButton.addEventListener(
-            "click",
-            function () {
+            if (mainNav.classList.contains("mobile-open")) {
 
-                mainNav.classList.toggle("mobile-open");
+                mobileMenuButton.textContent = "✕";
 
+                mobileMenuButton.setAttribute(
+                    "aria-label",
+                    "Cerrar menú"
+                );
 
-                if (
-                    mainNav.classList.contains("mobile-open")
-                ) {
+            } else {
 
-                    mobileMenuButton.textContent = "✕";
+                mobileMenuButton.textContent = "☰";
 
-                    mobileMenuButton.setAttribute(
-                        "aria-label",
-                        "Cerrar menú"
-                    );
-
-                } else {
-
-                    mobileMenuButton.textContent = "☰";
-
-                    mobileMenuButton.setAttribute(
-                        "aria-label",
-                        "Abrir menú"
-                    );
-
-                }
+                mobileMenuButton.setAttribute(
+                    "aria-label",
+                    "Abrir menú"
+                );
 
             }
-        );
-
-
-        /* CERRAR AL SELECCIONAR UNA PÁGINA */
-
-        const menuLinks =
-            mainNav.querySelectorAll("a");
-
-
-        menuLinks.forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    mainNav.classList.remove(
-                        "mobile-open"
-                    );
-
-                    mobileMenuButton.textContent = "☰";
-
-                    mobileMenuButton.setAttribute(
-                        "aria-label",
-                        "Abrir menú"
-                    );
-
-                }
-            );
 
         });
 
     }
 
 
+    /* ==========================================
+       CERRAR MENÚ AL CAMBIAR DE PÁGINA
+    ========================================== */
 
-    /* ========================================
-       CERRAR MENÚ AL VOLVER A PC
-    ======================================== */
+    const navLinks =
+        document.querySelectorAll("#mainNav a");
 
-    window.addEventListener(
-        "resize",
-        function () {
 
-            if (window.innerWidth > 750) {
+    navLinks.forEach(function (link) {
 
-                if (mainNav) {
-                    mainNav.classList.remove(
-                        "mobile-open"
-                    );
-                }
+        link.addEventListener("click", function () {
 
-                if (mobileMenuButton) {
-                    mobileMenuButton.textContent = "☰";
-                }
+            if (mainNav) {
+
+                mainNav.classList.remove(
+                    "mobile-open"
+                );
+
+            }
+
+            if (mobileMenuButton) {
+
+                mobileMenuButton.textContent = "☰";
+
+                mobileMenuButton.setAttribute(
+                    "aria-label",
+                    "Abrir menú"
+                );
+
+            }
+
+        });
+
+    });
+
+
+    /* ==========================================
+       SLIDER DE LA PÁGINA DE INICIO
+    ========================================== */
+
+    const slides =
+        document.querySelectorAll(".hero-slide");
+
+
+    if (slides.length > 1) {
+
+        let currentSlide = 0;
+
+
+        // Asegurar que solo la primera imagen
+        // esté activa al comenzar
+
+        slides.forEach(function (slide, index) {
+
+            if (index === 0) {
+
+                slide.classList.add("active");
+
+            } else {
+
+                slide.classList.remove("active");
+
+            }
+
+        });
+
+
+        // Cambiar imagen cada 5 segundos
+
+        setInterval(function () {
+
+            slides[currentSlide]
+                .classList.remove("active");
+
+
+            currentSlide++;
+
+
+            if (currentSlide >= slides.length) {
+
+                currentSlide = 0;
+
+            }
+
+
+            slides[currentSlide]
+                .classList.add("active");
+
+        }, 5000);
+
+    }
+
+
+    /* ==========================================
+       SCROLL SUAVE
+    ========================================== */
+
+    document.documentElement.style.scrollBehavior =
+        "smooth";
+
+
+    /* ==========================================
+       CERRAR EL MENÚ AL VOLVER A PC
+    ========================================== */
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 750) {
+
+            if (mainNav) {
+
+                mainNav.classList.remove(
+                    "mobile-open"
+                );
+
+            }
+
+            if (mobileMenuButton) {
+
+                mobileMenuButton.textContent = "☰";
 
             }
 
         }
-    );
+
+    });
 
 });

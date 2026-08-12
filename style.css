@@ -1,11 +1,11 @@
 /* ========================================
    CHILEVERSA STUDIO OFFICIAL
-   STYLE.CSS COMPLETO
+   STYLE.CSS
 ======================================== */
 
 
 /* ========================================
-   RESET GENERAL
+   RESET
 ======================================== */
 
 * {
@@ -52,9 +52,7 @@ header {
     padding: 0 7%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     background: rgba(5, 5, 5, 0.94);
@@ -71,7 +69,11 @@ header {
 
 .logo {
     display: flex;
+    align-items: center;
+}
 
+.logo a {
+    display: flex;
     align-items: center;
 }
 
@@ -90,14 +92,12 @@ header {
 
 
 /* ========================================
-   NAVEGACIÓN
+   MENÚ
 ======================================== */
 
 nav {
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 }
 
@@ -107,7 +107,6 @@ nav a {
     color: #cfcfcf;
 
     font-size: 13px;
-
     font-weight: bold;
 
     transition: 0.3s;
@@ -185,7 +184,6 @@ nav a.active::after {
     min-height: 100vh;
 
     display: flex;
-
     align-items: center;
 
     padding: 140px 10%;
@@ -283,13 +281,11 @@ nav a.active::after {
 
     from {
         opacity: 0;
-
         transform: translateY(30px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 
@@ -297,7 +293,7 @@ nav a.active::after {
 
 
 /* ========================================
-   TEXTOS GENERALES
+   TEXTOS
 ======================================== */
 
 .small-title {
@@ -349,7 +345,7 @@ nav a.active::after {
         0 0 40px rgba(255, 0, 0, 0.35);
 }
 
-.hero p:not(.small-title) {
+.hero-description {
     max-width: 650px;
 
     margin-top: 35px;
@@ -403,7 +399,7 @@ nav a.active::after {
 }
 
 
-/* BOTÓN PRINCIPAL */
+/* PRINCIPAL */
 
 .principal {
     background: #ff2020;
@@ -424,7 +420,7 @@ nav a.active::after {
 }
 
 
-/* BOTÓN SECUNDARIO */
+/* SECUNDARIO */
 
 .secundario {
     background: rgba(0, 0, 0, 0.35);
@@ -444,7 +440,7 @@ nav a.active::after {
 
 
 /* ========================================
-   INFORMACIÓN DEL HERO
+   INFORMACIÓN HERO
 ======================================== */
 
 .hero-info {
@@ -487,7 +483,7 @@ nav a.active::after {
 
 
 /* ========================================
-   SCROLL INDICATOR
+   SCROLL
 ======================================== */
 
 .scroll-indicator {
@@ -543,10 +539,11 @@ nav a.active::after {
 
 
 /* ========================================
-   ENCABEZADO DE PÁGINAS
+   HEADER DE PÁGINAS
 ======================================== */
 
-.page-header {
+.page-header,
+.page-hero {
     position: relative;
 
     min-height: 430px;
@@ -576,7 +573,8 @@ nav a.active::after {
     border-bottom: 1px solid #1d1d1d;
 }
 
-.page-header::after {
+.page-header::after,
+.page-hero::after {
     content: "";
 
     position: absolute;
@@ -594,19 +592,15 @@ nav a.active::after {
     pointer-events: none;
 }
 
-.page-header .small-title {
+.page-header > *,
+.page-hero > * {
     position: relative;
 
     z-index: 2;
-
-    margin-bottom: 18px;
 }
 
-.page-header h1 {
-    position: relative;
-
-    z-index: 2;
-
+.page-header h1,
+.page-hero h1 {
     font-size: clamp(55px, 8vw, 100px);
 
     line-height: 0.9;
@@ -616,17 +610,15 @@ nav a.active::after {
     letter-spacing: -4px;
 }
 
-.page-header h1 span {
+.page-header h1 span,
+.page-hero h1 span {
     display: block;
 
     color: #ff2020;
 }
 
-.page-header > p:last-child {
-    position: relative;
-
-    z-index: 2;
-
+.page-header > p:last-child,
+.page-hero .page-description {
     max-width: 650px;
 
     margin-top: 28px;
@@ -638,9 +630,15 @@ nav a.active::after {
     line-height: 1.7;
 }
 
+.page-content {
+    position: relative;
+
+    z-index: 2;
+}
+
 
 /* ========================================
-   TITULOS DE SECCIONES
+   TITULOS DE SECCIÓN
 ======================================== */
 
 .section-title {
@@ -721,7 +719,7 @@ nav a.active::after {
 }
 
 
-/* CAJA CV */
+/* CAJAS */
 
 .info-box {
     min-height: 300px;
@@ -830,16 +828,16 @@ nav a.active::after {
 
 
 /* ========================================
-   JUEGOS / PROYECTOS
+   JUEGOS
 ======================================== */
 
-.projects-page {
+.games-section {
     padding: 120px 10%;
 
     background: #070707;
 }
 
-.projects-grid {
+.games-container {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
@@ -847,7 +845,7 @@ nav a.active::after {
     gap: 25px;
 }
 
-.project-card {
+.game-card {
     overflow: hidden;
 
     background:
@@ -859,13 +857,10 @@ nav a.active::after {
 
     border: 1px solid #242424;
 
-    transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
+    transition: 0.35s;
 }
 
-.project-card:hover {
+.game-card:hover {
     transform: translateY(-8px);
 
     border-color: #ff2020;
@@ -874,9 +869,7 @@ nav a.active::after {
         0 25px 60px rgba(0, 0, 0, 0.45);
 }
 
-.project-image {
-    position: relative;
-
+.game-image {
     height: 330px;
 
     overflow: hidden;
@@ -884,7 +877,7 @@ nav a.active::after {
     background: #111111;
 }
 
-.project-image img {
+.game-image img {
     width: 100%;
     height: 100%;
 
@@ -893,190 +886,89 @@ nav a.active::after {
     transition: transform 0.6s ease;
 }
 
-.project-card:hover .project-image img {
+.game-card:hover .game-image img {
     transform: scale(1.06);
 }
 
-.project-image::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 45%;
-
-    background:
-        linear-gradient(
-            transparent,
-            rgba(0, 0, 0, 0.75)
-        );
-
-    pointer-events: none;
-}
-
-
-/* ESTADO */
-
-.project-status {
-    position: absolute;
-
-    top: 20px;
-    right: 20px;
-
-    z-index: 5;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    padding: 9px 13px;
-
-    background: rgba(0, 0, 0, 0.78);
-
-    backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    color: #ffffff;
-
-    font-size: 9px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-}
-
-.project-status span {
-    width: 7px;
-    height: 7px;
-
-    border-radius: 50%;
-
-    display: block;
-}
-
-.project-status.available span {
-    background: #35d16f;
-
-    box-shadow:
-        0 0 10px rgba(53, 209, 111, 0.7);
-}
-
-.project-status.upcoming span {
-    background: #ff2020;
-
-    box-shadow:
-        0 0 10px rgba(255, 32, 32, 0.7);
-}
-
-
-/* CONTENIDO */
-
-.project-content {
+.game-content {
     padding: 40px;
 }
 
-.project-content h3 {
-    margin: 12px 0 18px;
+.game-category {
+    color: #ff2020;
 
-    font-size: 36px;
+    font-size: 10px;
 
-    line-height: 1;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.game-content h2 {
+    margin-bottom: 18px;
+
+    font-size: 38px;
 
     font-weight: 900;
 
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
 }
 
-.project-content > p:not(.section-label) {
+.game-content > p:not(.game-category) {
     color: #888888;
 
     line-height: 1.8;
 
-    margin-bottom: 25px;
-
-    font-size: 14px;
-}
-
-
-/* ETIQUETAS */
-
-.project-tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
     margin-bottom: 30px;
 }
 
-.project-tags span {
-    padding: 7px 10px;
 
-    border: 1px solid #2c2c2c;
+/* MENSAJE JUEGOS */
 
-    color: #777777;
+.games-message {
+    padding: 150px 10%;
 
-    font-size: 9px;
-
-    font-weight: bold;
-
-    letter-spacing: 1.5px;
-}
-
-
-/* PRÓXIMO PROYECTO */
-
-.upcoming-image {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 
     background:
         radial-gradient(
-            circle at center,
-            rgba(255, 32, 32, 0.20),
+            circle,
+            rgba(255, 0, 0, 0.15),
             transparent 50%
         ),
-        #101010;
+        #090909;
 }
 
-.coming-soon {
-    position: relative;
+.games-message h2 {
+    max-width: 900px;
 
-    z-index: 2;
+    margin: 20px auto 25px;
 
-    width: 150px;
-    height: 150px;
+    font-size: clamp(45px, 7vw, 80px);
 
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(255, 32, 32, 0.35);
-
-    box-shadow:
-        0 0 70px rgba(255, 32, 32, 0.12);
-}
-
-.coming-soon span {
-    color: #ff2020;
-
-    font-size: 55px;
+    line-height: 0.95;
 
     font-weight: 900;
 
-    letter-spacing: -5px;
+    letter-spacing: -4px;
+}
+
+.games-message h2 span {
+    display: block;
+
+    color: #ff2020;
+}
+
+.games-message > p:last-child {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #888888;
+
+    line-height: 1.7;
 }
 
 
@@ -1084,22 +976,22 @@ nav a.active::after {
    EQUIPO
 ======================================== */
 
-.team-page {
+.team-section {
     padding: 120px 10%;
 
     background: #070707;
 }
 
-.team-page-grid {
+.team-container {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
 
     gap: 20px;
 }
 
-.team-member-large {
-    min-height: 300px;
+.team-card {
+    min-height: 250px;
 
     padding: 35px;
 
@@ -1121,13 +1013,13 @@ nav a.active::after {
     transition: 0.35s;
 }
 
-.team-member-large:hover {
+.team-card:hover {
     border-color: #ff2020;
 
     transform: translateY(-7px);
 }
 
-.team-member-photo {
+.team-avatar {
     flex-shrink: 0;
 
     width: 130px;
@@ -1148,37 +1040,43 @@ nav a.active::after {
         );
 
     border: 1px solid #333333;
-
-    font-size: 45px;
 }
 
-.team-member-info h3 {
-    margin: 10px 0 15px;
+.team-avatar span {
+    color: #ff2020;
 
-    font-size: 27px;
+    font-size: 32px;
+
+    font-weight: 900;
 }
 
-.team-member-info > p:last-child {
-    color: #858585;
+.team-role {
+    color: #ff2020;
 
-    line-height: 1.7;
-}
-
-.member-role {
-    color: #ff2020 !important;
-
-    font-size: 12px !important;
+    font-size: 11px;
 
     font-weight: bold;
 
     letter-spacing: 2px;
 
-    margin-bottom: 15px !important;
+    margin-bottom: 12px;
+}
+
+.team-info h2 {
+    margin-bottom: 15px;
+
+    font-size: 28px;
+}
+
+.team-info > p:last-child {
+    color: #858585;
+
+    line-height: 1.7;
 }
 
 
 /* ========================================
-   MENSAJE FINAL
+   MENSAJE EQUIPO
 ======================================== */
 
 .team-message {
@@ -1229,104 +1127,6 @@ nav a.active::after {
 /* ========================================
    NOTICIAS
 ======================================== */
-
-.news-page {
-    padding: 120px 10%;
-
-    background: #070707;
-}
-
-.news-page-grid {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 30px;
-}
-
-.news-large {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    min-height: 400px;
-
-    background: #101010;
-
-    border: 1px solid #242424;
-
-    overflow: hidden;
-
-    transition: 0.35s;
-}
-
-.news-large:hover {
-    border-color: #ff2020;
-
-    transform: translateY(-5px);
-}
-
-.news-large-image {
-    min-height: 350px;
-
-    overflow: hidden;
-
-    background: #151515;
-}
-
-.news-large-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: 0.5s;
-}
-
-.news-large:hover .news-large-image img {
-    transform: scale(1.05);
-}
-
-.news-large-content {
-    padding: 50px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-.news-date {
-    color: #ff2020;
-
-    font-size: 11px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 15px;
-}
-
-.news-large-content h3 {
-    margin-bottom: 20px;
-
-    font-size: 32px;
-
-    line-height: 1.1;
-}
-
-.news-large-content p {
-    color: #888888;
-
-    line-height: 1.8;
-
-    margin-bottom: 12px;
-}
-
-
-/* NOTICIA DESTACADA */
 
 .featured-news {
     display: grid;
@@ -1464,9 +1264,6 @@ nav a.active::after {
 .featured-news-content strong {
     color: #ffffff;
 }
-
-
-/* ESTADO */
 
 .update-status {
     display: flex;
@@ -1615,18 +1412,18 @@ nav a.active::after {
    CONTACTO
 ======================================== */
 
-.contact-page {
+.contact-section {
     padding: 120px 10%;
 
     background: #070707;
 }
 
-.contact-grid {
+.contact-container {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 20px;
 }
 
 .contact-card {
@@ -1651,7 +1448,7 @@ nav a.active::after {
     margin-bottom: 25px;
 }
 
-.contact-card h3 {
+.contact-card h2 {
     font-size: 27px;
 
     margin-bottom: 12px;
@@ -1665,18 +1462,96 @@ nav a.active::after {
     margin-bottom: 25px;
 }
 
-.support-email {
-    margin-top: 15px;
-
-    color: #ffffff !important;
+.contact-link {
+    color: #ff2020;
 
     font-size: 14px;
 
     font-weight: bold;
 
-    line-height: 1.5;
-
     word-break: break-word;
+
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+}
+
+.contact-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    background: #ff2020;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #d90000;
+
+    transform: translateY(-3px);
+}
+
+
+/* CONTACTO FINAL */
+
+.contact-message {
+    padding: 150px 10%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 0, 0, 0.15),
+            transparent 50%
+        ),
+        #090909;
+}
+
+.contact-message h2 {
+    max-width: 900px;
+
+    margin: 20px auto;
+
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+}
+
+.contact-message h2 span {
+    display: block;
+
+    color: #ff2020;
+}
+
+.contact-message > p:last-child {
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+    color: #888888;
+
+    line-height: 1.7;
 }
 
 
@@ -1750,27 +1625,6 @@ footer p {
 
 
 /* ========================================
-   ANIMACIONES GENERALES
-======================================== */
-
-.section {
-    opacity: 0;
-
-    transform: translateY(30px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.section.visible {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* ========================================
    TABLET
 ======================================== */
 
@@ -1791,7 +1645,7 @@ footer p {
     }
 
 
-    .projects-grid {
+    .games-container {
         grid-template-columns: 1fr;
     }
 
@@ -1806,27 +1660,7 @@ footer p {
     }
 
 
-    .game-showcase {
-        grid-template-columns: 1fr;
-    }
-
-
-    .details-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    .features-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-
     .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .team-page-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1835,11 +1669,16 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
+
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 
 /* ========================================
-   CELULAR / MENÚ MÓVIL
+   CELULAR
 ======================================== */
 
 @media (max-width: 750px) {
@@ -1905,8 +1744,6 @@ footer p {
     }
 
 
-    /* MENÚ ABIERTO */
-
     nav.mobile-open {
         transform: translateY(0);
 
@@ -1960,12 +1797,33 @@ footer p {
     }
 
 
-    /* PAGE HEADER */
+    .hero h1 {
+        font-size: 55px;
 
-    .page-header {
+        letter-spacing: -3px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    /* PÁGINAS */
+
+    .page-header,
+    .page-hero {
         min-height: 380px;
 
         padding: 140px 7% 70px;
+    }
+
+
+    .page-header h1,
+    .page-hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
     }
 
 
@@ -1973,21 +1831,39 @@ footer p {
 
     .content-section,
     .values,
-    .projects-page,
-    .team-page,
-    .news-page,
+    .games-section,
+    .team-section,
     .update-details,
-    .contact-page {
+    .contact-section {
         padding-left: 7%;
 
         padding-right: 7%;
     }
 
 
-    /* PROYECTOS */
+    /* JUEGOS */
 
-    .project-image {
-        height: 300px;
+    .game-image {
+        height: 280px;
+    }
+
+
+    .game-content {
+        padding: 30px 25px;
+    }
+
+
+    .game-content h2 {
+        font-size: 32px;
+    }
+
+
+    /* EQUIPO */
+
+    .team-card {
+        flex-direction: column;
+
+        text-align: center;
     }
 
 
@@ -1998,24 +1874,42 @@ footer p {
     }
 
 
+    .featured-news-content h2 {
+        font-size: 40px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .featured-news-image {
+        min-height: 300px;
+    }
+
+
     .update-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* EQUIPO */
+    /* CONTACTO */
 
-    .team-member-large {
-        flex-direction: column;
-
-        text-align: center;
+    .contact-container {
+        grid-template-columns: 1fr;
     }
 
 
-    /* CONTACTO */
+    .contact-card {
+        padding: 35px 25px;
+    }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+
+    /* MENSAJES */
+
+    .team-message,
+    .games-message,
+    .news-message,
+    .contact-message {
+        padding: 100px 7%;
     }
 
 
@@ -2042,12 +1936,10 @@ footer p {
 
 
 /* ========================================
-   CELULARES PEQUEÑOS
+   CELULAR PEQUEÑO
 ======================================== */
 
 @media (max-width: 550px) {
-
-    /* HERO */
 
     .hero {
         min-height: 100vh;
@@ -2057,18 +1949,9 @@ footer p {
 
 
     .hero h1 {
-        font-size: 55px;
-
-        letter-spacing: -3px;
+        font-size: 50px;
     }
 
-
-    .hero p:not(.small-title) {
-        font-size: 16px;
-    }
-
-
-    /* BOTONES */
 
     .buttons {
         flex-direction: column;
@@ -2081,8 +1964,6 @@ footer p {
         width: 100%;
     }
 
-
-    /* INFORMACIÓN */
 
     .hero-info {
         gap: 20px;
@@ -2101,97 +1982,18 @@ footer p {
     }
 
 
-    /* TITULOS */
-
-    .page-header h1 {
-        font-size: 55px;
-
-        letter-spacing: -3px;
-    }
-
-
-    /* QUIÉNES SOMOS */
-
-    .content-section {
-        padding-top: 80px;
-
-        padding-bottom: 80px;
-    }
-
-
     .info-box {
         min-height: 220px;
     }
 
 
-    /* PROYECTOS */
-
-    .projects-page {
-        padding-top: 90px;
-
-        padding-bottom: 90px;
-    }
-
-
-    .project-image {
-        height: 250px;
-    }
-
-
-    .project-content {
-        padding: 30px 25px;
-    }
-
-
-    .project-content h3 {
-        font-size: 30px;
-    }
-
-
-    .project-status {
-        top: 15px;
-
-        right: 15px;
-    }
-
-
-    .coming-soon {
-        width: 120px;
-
-        height: 120px;
-    }
-
-
-    .coming-soon span {
-        font-size: 42px;
-    }
-
-
-    /* EQUIPO */
-
-    .team-member-large {
-        padding: 30px 20px;
-    }
-
-
-    /* NOTICIAS */
-
-    .featured-news-image {
-        min-height: 300px;
-    }
-
-
-    .featured-badge {
-        top: 20px;
-
-        left: 20px;
+    .game-image {
+        height: 240px;
     }
 
 
     .featured-news-content h2 {
-        font-size: 40px;
-
-        letter-spacing: -2px;
+        font-size: 38px;
     }
 
 
@@ -2202,37 +2004,21 @@ footer p {
     }
 
 
-    .news-large {
-        grid-template-columns: 1fr;
+    .featured-badge {
+        top: 20px;
+
+        left: 20px;
     }
 
 
-    .news-large-image {
-        min-height: 280px;
+    .team-card {
+        padding: 30px 20px;
     }
 
 
-    .news-large-content {
-        padding: 35px 25px;
-    }
-
-
-    .news-message,
-    .team-message {
-        padding: 100px 7%;
-    }
-
-
-    .news-message h2,
-    .team-message h2 {
-        letter-spacing: -3px;
-    }
-
-
-    /* CONTACTO */
-
-    .contact-card {
-        padding: 35px 25px;
+    .team-avatar {
+        width: 110px;
+        height: 110px;
     }
 
 }

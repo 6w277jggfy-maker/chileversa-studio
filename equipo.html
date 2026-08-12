@@ -17,23 +17,41 @@
 <body>
 
 
-    <!-- ========================================
-         MENÚ
-    ========================================= -->
+    <!-- ==============================
+         HEADER
+    =============================== -->
 
     <header>
 
         <div class="logo">
 
-            <img
-                src="images/logo.png"
-                alt="ChileVersa Studio"
-            >
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="ChileVersa Studio"
+                >
+
+            </a>
 
         </div>
 
 
-        <nav>
+        <!-- MENÚ CELULAR -->
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Abrir menú">
+
+            ☰
+
+        </button>
+
+
+        <!-- MENÚ PRINCIPAL -->
+
+        <nav id="mainNav">
 
             <a href="index.html">
                 Inicio
@@ -47,8 +65,12 @@
                 Juegos
             </a>
 
-            <a href="equipo.html" class="active">
+            <a
+                href="equipo.html"
+                class="active">
+
                 Equipo
+
             </a>
 
             <a href="noticias.html">
@@ -65,233 +87,176 @@
 
 
 
-    <!-- ========================================
+    <!-- ==============================
          CONTENIDO
-    ========================================= -->
+    =============================== -->
 
     <main>
 
 
-        <!-- ENCABEZADO -->
+        <!-- PORTADA -->
 
-        <section class="page-header">
+        <section class="page-hero">
 
-            <p class="small-title">
-                CHILEVERSA STUDIO
-            </p>
+            <div class="page-content">
 
-
-            <h1>
-
-                NUESTRO
-
-                <span>
-                    EQUIPO
-                </span>
-
-            </h1>
-
-
-            <p>
-
-                Conoce al equipo detrás de los proyectos
-                y experiencias de ChileVersa Studio.
-
-            </p>
-
-        </section>
-
-
-
-        <!-- ========================================
-             EQUIPO
-        ========================================= -->
-
-        <section class="team-page">
-
-
-            <div class="section-title">
-
-                <p>
+                <p class="small-title">
                     CHILEVERSA STUDIO OFFICIAL
                 </p>
 
 
-                <h2>
-                    PERSONAS DETRÁS DEL PROYECTO
-                </h2>
+                <h1>
+
+                    NUESTRO
+
+                    <span>
+                        EQUIPO
+                    </span>
+
+                </h1>
+
+
+                <p class="page-description">
+
+                    Conoce a las personas que forman parte de
+                    ChileVersa Studio y que trabajan día a día
+                    para crear nuevas experiencias dentro de Roblox.
+
+                </p>
 
             </div>
-
-
-
-            <div class="team-page-grid">
-
-
-                <!-- =================================
-                     MATIAS WINKELMANN
-                ================================== -->
-
-                <div class="team-member-large">
-
-
-                    <div class="team-member-photo">
-
-                        👑
-
-                    </div>
-
-
-                    <div class="team-member-info">
-
-
-                        <p class="section-label">
-                            EXECUTIVE
-                        </p>
-
-
-                        <h3>
-                            MATIAS WINKELMANN
-                        </h3>
-
-
-                        <p
-                            class="member-role"
-                        >
-                            CEO & FUNDADOR
-                        </p>
-
-
-                        <p>
-
-                            Responsable de dirigir
-                            ChileVersa Studio y supervisar
-                            la visión general de nuestros
-                            proyectos.
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- =================================
-                     ERICK
-                ================================== -->
-
-                <div class="team-member-large">
-
-
-                    <div class="team-member-photo">
-
-                        🤝
-
-                    </div>
-
-
-                    <div class="team-member-info">
-
-
-                        <p class="section-label">
-                            EXECUTIVE
-                        </p>
-
-
-                        <h3>
-                            ERICK
-                        </h3>
-
-
-                        <p
-                            class="member-role"
-                        >
-                            CO-FUNDADOR & DIRECTOR
-                        </p>
-
-
-                        <p>
-
-                            Participa en la dirección
-                            y organización de los proyectos
-                            de ChileVersa Studio.
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- =================================
-                     JARASANTO
-                ================================== -->
-
-                <div class="team-member-large">
-
-
-                    <div class="team-member-photo">
-
-                        💻
-
-                    </div>
-
-
-                    <div class="team-member-info">
-
-
-                        <p class="section-label">
-                            DEVELOPMENT
-                        </p>
-
-
-                        <h3>
-                            JARASANTO
-                        </h3>
-
-
-                        <p
-                            class="member-role"
-                        >
-                            HEAD OF DEVELOPMENT
-                        </p>
-
-
-                        <p>
-
-                            Encargado del equipo de
-                            desarrolladores y de coordinar
-                            el desarrollo de nuestras
-                            experiencias.
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
 
         </section>
 
 
 
-        <!-- ========================================
+        <!-- ==============================
+             EQUIPO
+        =============================== -->
+
+        <section class="team-section">
+
+            <div class="team-container">
+
+
+                <!-- MATIAS -->
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+
+                        <span>
+                            MW
+                        </span>
+
+                    </div>
+
+
+                    <div class="team-info">
+
+                        <p class="team-role">
+                            CEO · FUNDADOR
+                        </p>
+
+
+                        <h2>
+                            Matias Winkelmann
+                        </h2>
+
+
+                        <p>
+                            Fundador y responsable de la dirección
+                            general de ChileVersa Studio.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ERICK -->
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+
+                        <span>
+                            ER
+                        </span>
+
+                    </div>
+
+
+                    <div class="team-info">
+
+                        <p class="team-role">
+                            CO-CEO · CO-FUNDADOR
+                        </p>
+
+
+                        <h2>
+                            Erick
+                        </h2>
+
+
+                        <p>
+                            Co-fundador y parte del equipo encargado
+                            del desarrollo y crecimiento del estudio.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JARASANTO -->
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+
+                        <span>
+                            JS
+                        </span>
+
+                    </div>
+
+
+                    <div class="team-info">
+
+                        <p class="team-role">
+                            LEAD DEVELOPER
+                        </p>
+
+
+                        <h2>
+                            Jarasanto
+                        </h2>
+
+
+                        <p>
+                            Encargado del equipo de desarrolladores
+                            y de la creación de nuevas funcionalidades.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
              MENSAJE FINAL
-        ========================================= -->
+        =============================== -->
 
         <section class="team-message">
-
 
             <p class="small-title">
                 CHILEVERSA STUDIO
@@ -300,10 +265,10 @@
 
             <h2>
 
-                UNA VISIÓN.
+                UN EQUIPO
 
                 <span>
-                    UN EQUIPO.
+                    CON VISIÓN
                 </span>
 
             </h2>
@@ -311,13 +276,11 @@
 
             <p>
 
-                Trabajamos juntos para crear
-                experiencias únicas dentro de Roblox
-                y seguir haciendo crecer nuestra
-                comunidad.
+                Trabajamos juntos para desarrollar proyectos,
+                mejorar nuestras experiencias y seguir creciendo
+                dentro de la comunidad de Roblox.
 
             </p>
-
 
         </section>
 
@@ -326,12 +289,11 @@
 
 
 
-    <!-- ========================================
+    <!-- ==============================
          FOOTER
-    ========================================= -->
+    =============================== -->
 
     <footer>
-
 
         <div>
 
@@ -339,9 +301,8 @@
                 CHILEVERSA STUDIO
             </strong>
 
-
             <p>
-                Creando experiencias en Roblox.
+                Creando experiencias dentro de Roblox.
             </p>
 
         </div>
@@ -358,6 +319,8 @@
     </footer>
 
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 

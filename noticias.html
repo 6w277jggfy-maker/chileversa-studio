@@ -17,23 +17,41 @@
 <body>
 
 
-    <!-- ================================
-         MENÚ
-    ================================= -->
+    <!-- ==============================
+         HEADER
+    =============================== -->
 
     <header>
 
         <div class="logo">
 
-            <img
-                src="images/logo.png"
-                alt="ChileVersa Studio"
-            >
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="ChileVersa Studio"
+                >
+
+            </a>
 
         </div>
 
 
-        <nav>
+        <!-- MENÚ CELULAR -->
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Abrir menú">
+
+            ☰
+
+        </button>
+
+
+        <!-- MENÚ PRINCIPAL -->
+
+        <nav id="mainNav">
 
             <a href="index.html">
                 Inicio
@@ -51,8 +69,12 @@
                 Equipo
             </a>
 
-            <a href="noticias.html" class="active">
+            <a
+                href="noticias.html"
+                class="active">
+
                 Noticias
+
             </a>
 
             <a href="contacto.html">
@@ -65,20 +87,21 @@
 
 
 
-    <!-- ================================
+    <!-- ==============================
          CONTENIDO
-    ================================= -->
+    =============================== -->
 
     <main>
 
 
-        <!-- ENCABEZADO -->
+        <!-- PORTADA -->
 
         <section class="page-header">
 
             <p class="small-title">
-                CHILEVERSA STUDIO
+                CHILEVERSA STUDIO OFFICIAL
             </p>
+
 
             <h1>
 
@@ -90,11 +113,11 @@
 
             </h1>
 
+
             <p>
 
-                Entérate de las novedades,
-                actualizaciones y proyectos
-                de nuestro estudio.
+                Conoce las novedades, actualizaciones
+                y noticias de nuestros proyectos.
 
             </p>
 
@@ -102,174 +125,236 @@
 
 
 
-        <!-- ================================
-             NOTICIAS
-        ================================= -->
+        <!-- ==============================
+             NOTICIA DESTACADA
+        =============================== -->
 
-        <section class="news-page">
+        <section class="featured-news">
+
+
+            <!-- IMAGEN -->
+
+            <div class="featured-news-image">
+
+                <img
+                    src="images/bus1.png"
+                    alt="Actualización Chile Bus RP"
+                >
+
+
+                <div class="featured-badge">
+                    ACTUALIZACIÓN
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTENIDO -->
+
+            <div class="featured-news-content">
+
+
+                <div class="news-meta">
+
+                    <span>
+                        17/07/2026
+                    </span>
+
+                    <span>
+                        CHILE BUS RP
+                    </span>
+
+                </div>
+
+
+
+                <h2>
+
+                    VALPARAÍSO Y
+
+                    <span>
+                        LINARES
+                    </span>
+
+                </h2>
+
+
+
+                <p>
+
+                    El día de hoy llegan dos nuevas ciudades
+                    a Chile Bus RP: <strong>Valparaíso</strong> y
+                    <strong>Linares</strong>.
+
+                </p>
+
+
+                <p>
+
+                    Además, Santiago recibe importantes mejoras
+                    para continuar ofreciendo una experiencia
+                    más completa y entretenida para nuestra comunidad.
+
+                </p>
+
+
+
+                <!-- ESTADO -->
+
+                <div class="update-status">
+
+                    <span></span>
+
+                    ACTUALIZACIÓN DISPONIBLE
+
+                </div>
+
+
+
+                <!-- BOTÓN -->
+
+                <a
+                    href="juegos.html"
+                    class="btn principal">
+
+                    VER MÁS
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==============================
+             DETALLES
+        =============================== -->
+
+        <section class="update-details">
 
 
             <div class="section-title">
 
                 <p>
-                    ACTUALIZACIONES
+                    ACTUALIZACIÓN
                 </p>
 
+
                 <h2>
-                    NOVEDADES
+                    ¿QUÉ HAY DE NUEVO?
                 </h2>
 
             </div>
 
 
 
-            <div class="news-page-grid">
+            <div class="update-grid">
 
 
-                <!-- NOTICIA 1 -->
+                <!-- VALPARAÍSO -->
 
-                <article class="news-large">
+                <div class="update-card">
 
-
-                    <div class="news-large-image">
-
-                        <img
-                            src="images/bus1.png"
-                            alt="Chile Bus RP"
-                        >
-
+                    <div class="update-number">
+                        01
                     </div>
 
 
-                    <div class="news-large-content">
+                    <h3>
+                        VALPARAÍSO
+                    </h3>
 
-                        <p class="news-date">
-                            AGOSTO 2026
-                        </p>
 
-                        <h3>
-                            NUEVAS ACTUALIZACIONES
-                        </h3>
+                    <p>
 
-                        <p>
+                        Una nueva ciudad llega a Chile Bus RP
+                        para ampliar las posibilidades de recorrido
+                        y ofrecer nuevas rutas.
 
-                            Seguimos trabajando para
-                            mejorar nuestras experiencias
-                            y entregar nuevo contenido
-                            a nuestra comunidad.
+                    </p>
 
-                        </p>
+                </div>
 
-                        <p>
 
-                            Nuestro equipo continúa
-                            desarrollando nuevas funciones,
-                            vehículos y mejoras para
-                            nuestros proyectos.
 
-                        </p>
+                <!-- LINARES -->
 
+                <div class="update-card">
+
+                    <div class="update-number">
+                        02
                     </div>
 
 
-                </article>
+                    <h3>
+                        LINARES
+                    </h3>
+
+
+                    <p>
+
+                        Incorporamos Linares como una nueva
+                        ciudad disponible dentro de la experiencia.
+
+                    </p>
+
+                </div>
 
 
 
-                <!-- NOTICIA 2 -->
+                <!-- SANTIAGO -->
 
-                <article class="news-large">
+                <div class="update-card">
 
-
-                    <div class="news-large-image">
-
-                        <img
-                            src="images/bus2.png"
-                            alt="Chile Bus RP"
-                        >
-
+                    <div class="update-number">
+                        03
                     </div>
 
 
-                    <div class="news-large-content">
+                    <h3>
+                        SANTIAGO MEJORADO
+                    </h3>
 
-                        <p class="news-date">
-                            PRÓXIMAMENTE
-                        </p>
 
-                        <h3>
-                            NUEVO CONTENIDO
-                        </h3>
+                    <p>
 
-                        <p>
+                        Santiago recibe mejoras para ofrecer
+                        una experiencia más completa y mejorar
+                        el recorrido de nuestros jugadores.
 
-                            Estamos preparando nuevo
-                            contenido para Chile Bus RP
-                            y futuras experiencias de
-                            ChileVersa Studio.
+                    </p>
 
-                        </p>
+                </div>
 
-                        <p>
 
-                            Pronto tendremos más
-                            información sobre nuestros
-                            próximos proyectos.
 
-                        </p>
+                <!-- FUTURO -->
 
+                <div class="update-card">
+
+                    <div class="update-number">
+                        04
                     </div>
 
 
-                </article>
+                    <h3>
+                        MÁS POR VENIR
+                    </h3>
 
 
+                    <p>
 
-                <!-- NOTICIA 3 -->
+                        Seguimos trabajando en nuevas
+                        actualizaciones, ciudades y contenido
+                        para Chile Bus RP.
 
-                <article class="news-large">
+                    </p>
 
-
-                    <div class="news-large-image news-no-image">
-
-                        <span>
-                            CV
-                        </span>
-
-                    </div>
-
-
-                    <div class="news-large-content">
-
-                        <p class="news-date">
-                            CHILEVERSA STUDIO
-                        </p>
-
-                        <h3>
-                            NUEVOS PROYECTOS
-                        </h3>
-
-                        <p>
-
-                            ChileVersa Studio continúa
-                            creciendo y trabajando en
-                            nuevos proyectos dentro
-                            de Roblox.
-
-                        </p>
-
-                        <p>
-
-                            Nuestro objetivo es seguir
-                            creando experiencias únicas
-                            para nuestra comunidad.
-
-                        </p>
-
-                    </div>
-
-
-                </article>
+                </div>
 
 
             </div>
@@ -279,24 +364,24 @@
 
 
 
-        <!-- ================================
-             PRÓXIMAMENTE
-        ================================= -->
+        <!-- ==============================
+             MENSAJE FINAL
+        =============================== -->
 
         <section class="news-message">
 
 
             <p class="small-title">
-                MANTENTE ATENTO
+                CHILEVERSA STUDIO
             </p>
 
 
             <h2>
 
-                MÁS NOVEDADES
+                SEGUIMOS
 
                 <span>
-                    PRÓXIMAMENTE
+                    DESARROLLANDO
                 </span>
 
             </h2>
@@ -304,11 +389,34 @@
 
             <p>
 
-                Sigue nuestras redes y nuestra
-                comunidad para no perderte ninguna
-                actualización.
+                Mantente atento a nuestras próximas
+                actualizaciones y novedades.
 
             </p>
+
+
+            <div class="buttons">
+
+
+                <a
+                    href="juegos.html"
+                    class="btn principal">
+
+                    VER JUEGOS
+
+                </a>
+
+
+                <a
+                    href="contacto.html"
+                    class="btn secundario">
+
+                    CONTACTO
+
+                </a>
+
+
+            </div>
 
 
         </section>
@@ -318,12 +426,11 @@
 
 
 
-    <!-- ================================
+    <!-- ==============================
          FOOTER
-    ================================= -->
+    =============================== -->
 
     <footer>
-
 
         <div>
 
@@ -332,7 +439,7 @@
             </strong>
 
             <p>
-                Creando experiencias en Roblox.
+                Creando experiencias dentro de Roblox.
             </p>
 
         </div>
@@ -346,10 +453,11 @@
 
         </div>
 
-
     </footer>
 
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
